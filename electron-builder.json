@@ -1,0 +1,42 @@
+{
+  "appId": "com.atmsensor.barcodemanager",
+  "productName": "ATM Sensor Barcode Manager",
+  "copyright": "Copyright © 2026",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "server/scripts/**/*",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "server/scripts",
+      "to": "scripts",
+      "filter": ["**/*"]
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "requestedExecutionLevel": "highestAvailable"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "shortcutName": "ATM Sensor Barcode Manager",
+    "runAfterFinish": true,
+    "include": "build/installer.nsh",
+    "artifactName": "ATM-Sensor-Barcode-Manager-Setup.exe"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ATM Sensor Barcode Label Manager",
+  "description": "Industrial barcode sticker generation, live preview, calibration, and ZPL printing management for ATM machine sensors and components.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
